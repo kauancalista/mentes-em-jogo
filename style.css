@@ -1,0 +1,50 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fefcf7;
+}
+.font-greek {
+  font-family: 'GFS Didot', serif;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fefcf7;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #bfa14a;
+  border-radius: 10px;
+}
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #f00;
+  opacity: 0;
+  animation: confetti-fall 3s ease-in-out forwards;
+}
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+.music-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(191, 161, 74, 0.8);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
