@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentes em Jogo: A Jornada Filosófica</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo">
+                <h1>Mentes em Jogo</h1>
+            </div>
+            <div class="music-control">
+                <button id="music-toggle"><i class="fas fa-music"></i></button>
+                <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+            </div>
+        </header>
+
+        <main>
+            <!-- Tela Inicial -->
+            <section id="home" class="active">
+                <h2>Jornada Filosófica</h2>
+                <p>Teste seus conhecimentos sobre filosofia!</p>
+                <button id="start-btn">Começar</button>
+                <button id="editor-access-btn">Modo Editor</button>
+            </section>
+
+            <!-- Login do Editor -->
+            <section id="editor-login">
+                <h2>Acesso do Editor</h2>
+                <input type="password" id="editor-token" placeholder="Digite o token de editor">
+                <button id="editor-login-btn">Acessar</button>
+                <button id="back-to-home-btn">Voltar</button>
+            </section>
+
+            <!-- Painel do Editor -->
+            <section id="editor-panel">
+                <h2>Painel do Editor</h2>
+                <div class="editor-form">
+                    <select id="phase-select">
+                        <option value="1">Fase 1: O Despertar Filosófico</option>
+                        <option value="2">Fase 2: As Origens do Pensamento</option>
+                        <option value="3">Fase 3: Vozes de Atenas</option>
+                        <option value="4">Fase 4: A Lógica de Aristóteles</option>
+                        <option value="5">Fase 5: Ética e Formação</option>
+                    </select>
+                    
+                    <textarea id="question-input" placeholder="Digite a pergunta"></textarea>
+                    
+                    <div class="answers-container">
+                        <div class="answer">
+                            <input type="radio" name="correct" value="0">
+                            <input type="text" placeholder="Resposta 1">
+                        </div>
+                        <!-- Mais 3 respostas... -->
+                    </div>
+                    
+                    <textarea id="explanation-input" placeholder="Explicação"></textarea>
+                    
+                    <button id="save-question">Salvar Pergunta</button>
+                    <button id="clear-form">Limpar</button>
+                </div>
+            </section>
+
+            <!-- Seleção de Avatar -->
+            <section id="avatar-selection">
+                <h2>Escolha seu Avatar</h2>
+                <div class="avatars-grid" id="avatars-grid"></div>
+                <button id="confirm-avatar">Confirmar</button>
+            </section>
+
+            <!-- Seleção de Fase -->
+            <section id="phases">
+                <h2>Escolha uma Fase</h2>
+                <div class="phases-grid" id="phases-grid"></div>
+            </section>
+
+            <!-- Quiz -->
+            <section id="quiz">
+                <h2 id="phase-title">Fase 1</h2>
+                <div class="question-counter">
+                    Pergunta <span id="current-q">1</span>/<span id="total-q">5</span>
+                </div>
+                
+                <div class="question-container">
+                    <p id="question-text"></p>
+                    <div id="answers" class="answers"></div>
+                </div>
+                
+                <div class="feedback" id="feedback">
+                    <p id="result-text"></p>
+                    <p id="explanation-text"></p>
+                </div>
+                
+                <div class="quiz-controls">
+                    <button id="hint-btn"><i class="fas fa-lightbulb"></i> Dica</button>
+                    <button id="next-btn">Próxima</button>
+                </div>
+            </section>
+
+            <!-- Resultados -->
+            <section id="results">
+                <h2>Resultado</h2>
+                <div id="score-display"></div>
+                <div id="medal"></div>
+                <button id="restart-btn">Jogar Novamente</button>
+            </section>
+
+            <!-- Ranking -->
+            <section id="ranking">
+                <h2>Ranking</h2>
+                <table id="ranking-table">
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Jogador</th>
+                            <th>Pontuação</th>
+                            <th>Avatar</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <button id="back-to-menu">Voltar ao Menu</button>
+            </section>
+        </main>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="assets/audio/background.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/game.js"></script>
+</body>
+</html>

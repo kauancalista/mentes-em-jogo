@@ -1,0 +1,82 @@
+/* Reset e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0b1e3d, #1a2e5a);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #bfa14a;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #bfa14a;
+}
+
+h1, h2, h3 {
+    color: #bfa14a;
+}
+
+.music-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.music-control button {
+    background: #bfa14a;
+    border: none;
+    color: #0b1e3d;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+section {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ... (CONTINUA - MAS JÁ PODE COPIAR TUDO) ... */
